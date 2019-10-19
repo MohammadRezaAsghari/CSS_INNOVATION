@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>lets desing an animation</title>
     <style>
-    
         *,
         *::before,
-        *::after{
+        *::after {
             -webkit-box-sizing: border-box;
             -moz-box-sizing: border-box;
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
-        body{
+        
+        body {
             background-color: darkslategray;
             font-family: sans-serif;
         }
         
-        .heading{
+        .heading {
             width: 100%;
             color: white;
             font-size: 45px;
@@ -28,10 +29,9 @@
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            
-            
         }
-        .heading::after{
+        
+        .heading::after {
             content: "programme";
             text-transform: uppercase;
             background-color: lightcoral;
@@ -39,58 +39,57 @@
             margin-left: 10px;
             display: inline-block;
             animation: text-animate 8s linear infinite;
-            
         }
         
-        @keyframes text-animate{
-            0%{
+        @keyframes text-animate {
+            0% {
                 content: "programme";
                 transform: translateY(0px);
                 opacity: 1;
             }
-            24%{
+            24% {
                 content: "programme";
                 transform: translateY(-20px);
                 opacity: 0;
             }
-            25%{
+            25% {
                 transform: translateY(0px);
                 content: "create";
                 opacity: 1;
             }
-            49%{
+            49% {
                 content: "create";
                 transform: translateY(-20px);
                 opacity: 0;
             }
-            50%{
+            50% {
                 content: "inspire";
                 opacity: 1;
                 transform: translateY(0px);
             }
-            74%{
+            74% {
                 content: "inspire";
                 opacity: 0;
-                transform:translateY(-20px);
+                transform: translateY(-20px);
             }
-            75%{
+            75% {
                 content: "Design";
                 opacity: 1;
                 transform: translateY(0px);
             }
-            100%{
+            100% {
                 content: "Design";
                 transform: translateY(-20px);
                 opacity: 0;
             }
-            
         }
-    
     </style>
 </head>
+
 <body>
-    
+
     <h1 class="heading">unisabz teach you how to</h1>
-    
+
 </body>
+
 </html>

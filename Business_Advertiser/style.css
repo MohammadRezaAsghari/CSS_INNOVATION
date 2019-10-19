@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+:root {
+    --color-blue: #3498db;
+}
+
 html,
 body {
     height: 100%;
@@ -28,9 +32,8 @@ body {
 .center-circle {
     width: 300px;
     height: 300px;
-    background-color: #9b59b6;
-    background-color: #2ecc71;
     background-color: #3498db;
+    background-image: linear-gradient(to right, #2980b9, #3498db);
     position: absolute;
     top: 20px;
     left: 50%;
@@ -40,16 +43,29 @@ body {
     line-break: 300px;
     color: white;
     display: none;
-    padding: 10px;
+}
+
+.center-circle::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--color-blue);
+    border-top: none;
+    border-left: none;
+    border-radius: 50%;
+    transform: scale(2) rotate(45deg);
+    position: absolute;
 }
 
 .center-circle h2 {
     text-align: center;
-    padding: 15px;
-    padding-top: 40px;
+    padding: 50px;
+    padding-top: 30px;
     padding-bottom: 0px;
     font-size: 22px;
     font-weight: 700;
+    text-transform: capitalize;
 }
 
 .center-circle p {
@@ -59,30 +75,8 @@ body {
     font-size: 17px;
     font-weight: 400;
     line-height: 1.5;
+    text-transform: capitalize;
 }
-
-
-/* .center-circle::before {
-            content: "";
-            display: block;
-            width: 100%;
-            height: 100%;
-            border: 5px solid white;
-            border-radius: 50%;
-            transform: scale(1.9);
-        }
-        
-        .center-circle::after {
-            content: "";
-            display: block;
-            width: 800px;
-            height: 2px;
-            background-color: white;
-            position: absolute;
-            top: 50%;
-            left: 0;
-            transform: translateY(-1px) rotate(0deg);
-        } */
 
 input {
     display: none;
@@ -92,29 +86,19 @@ input {
     display: block;
     width: 80px;
     height: 80px;
-    background-color: #9b59b6;
-    background-color: #2ecc71;
-    background-color: #3498db;
     border-radius: 50%;
+    background-color: #3498db;
+    background-image: linear-gradient(to right, #2980b9, #3498db);
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
     bottom: 0px;
+    left: 50%;
+    z-index: 2;
+    transform: translateX(-50%);
     transition: all .3s;
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
-}
-
-.btn svg {
-    width: 30px;
-    height: 30px;
-    fill: rgba(255, 255, 255, 0.8);
-}
-
-.btn:hover>svg {
-    fill: rgba(255, 255, 255, 1);
 }
 
 .btn::before {
@@ -122,16 +106,23 @@ input {
     display: block;
     width: 100%;
     height: 100%;
-    border: 2px solid #9b59b6;
-    border: 2px solid rgba(0, 0, 0, 0.3);
     border: 1px solid #3498db;
-    transform: scale(1.3);
+    transform: scale(1.2);
     transition: all 1s;
     border-radius: 50%;
-    opacity: .7;
     display: none;
     position: absolute;
     z-index: -1;
+}
+
+.btn svg {
+    width: 35px;
+    height: 35px;
+    fill: rgba(255, 255, 255, 0.8);
+}
+
+.btn:hover>svg {
+    fill: rgba(255, 255, 255, 1);
 }
 
 .btn-1 {
@@ -157,6 +148,9 @@ input {
 .btn-7 {
     transform: translate(-324px, -283px);
 }
+
+
+/* btn and circle */
 
 #btn-1:checked~#circle-1 {
     display: block;

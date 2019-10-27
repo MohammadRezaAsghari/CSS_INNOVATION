@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    
+        .container{
+            float: right;
+            height: 100px;
+/*            border: 1px solid #000;*/
+            width: 100px;
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            transform: translate(50%,-50%);
+        }
+        .cup{
+            width: 70px;
+            height: 100px;
+            border: 1px solid #000;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border: 6px solid #aaaaaa;
+            background-color: #fddda2;
+            border-radius: 5px;
+            border-bottom-right-radius: 8px;
+            border-bottom-left-radius: 10px;
+        }
+        .cup::before{
+            content: "";
+            display: block;
+            position: absolute;
+            width: 30px;
+            height: 50px;
+            left: 100%;
+            top: 50%;
+            transform: translateY(-60%);
+            border: 6px solid #aaaaaa;
+            border-radius: 5px;
+        }
+        .bubble{
+            
+            background-color: #fff;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 100%;
+        }
+        .bubble-1{
+            width: 32px;
+            height: 32px;
+            transform: translate(-10px,3px);
+        }
+        .bubble-2{
+            width: 40px;
+            height: 40px;
+            transform: translate(8px, 3px);
+        }
+        .bubble-3{
+            width: 30px;
+            height: 30px;
+            transform: translate(38px, 3px);
+        }
+        .bubble-4,
+        .bubble-5{
+            width: 15px;
+            height: 70px;
+            border-radius: 10px;
+            right: 86%;
+        }
+        .bubble-4{
+            top: -15px;
+            animation: move 4s ease forwards;
+            animation-iteration-count: 1;
+        }
+        .bubble-5{
+            width: 50px;
+            height: 10px;
+            right: 15px;
+            top: 10px;
+            transform: rotate(-90deg);
+            animation: move 3s ease forwards;
+            animation-iteration-count: 1;
+            animation-delay: 2s;
+        }
+        .bu{
+            animation: scale 3s linear forwards;
+            animation-iteration-count: 1;
+        }
+        .ney{
+            width: 10px;
+            height: 60px;
+            border: 1px solid #000;
+            position: absolute;
+            bottom: 110%;
+            right: 95%;
+            transform: rotate(-20deg);
+            border: 3px solid #bdc3c7;
+            border-left-color: transparent;
+            border-bottom-color: transparent;
+        }
+        @keyframes move{
+            from{
+                margin-top: 0px;
+            }
+            to{
+                margin-top: 10px;
+                
+            }
+        }
+          @keyframes movee{
+            from{
+                top: 0px;
+            }
+            to{
+                top: 15px;
+                
+            }
+        }
+    </style>
+</head>
+<body>
+     <audio  autoplay>
+  <source src="coke.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio> 
+    <div class="container">
+        <div class="cup">
+           <div class="ney"></div>
+            <div class="bubble bubble-1"></div>
+            <div class="bubble bubble-2"></div>
+            <div class="bubble bubble-3"></div>
+            <div class="bubble bubble-4"></div>
+            <div class="bubble bubble-5"></div>
+            
+        </div>
+    </div>
+    
+</body>
+</html>

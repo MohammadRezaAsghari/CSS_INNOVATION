@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bubble</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+    
+        }
+        .body{
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            background-color: #f7f7f7;
+            position: absolute;
+            overflow: hidden;
+        }
+        span{
+/*
+            width: 100px;
+            height: 100px;
+*/
+/*            background-color: blueviolet;*/
+            border-radius: 50%;
+            display: block;
+            position: absolute;
+            animation: moveup 4s 1;
+            animation-fill-mode: forwards;
+            animation-timing-function: linear;
+            opacity: .9;
+        }
+        @keyframes moveup{
+            0%{
+                opacity: 1;
+            }
+            100%{
+                opacity: 0;
+                transform: translateY(-3000px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+   
+       <div class="body">
+           
+       </div>
+   
+   
+   
+    <script>
+        var body = document.querySelector('.body');
+        var x , y;
+        var color = ['#1abc9c', '#2ecc71', "#3498db", '#9b59b6', '#34495e' , '#e67e22', '#c0392b', '#2980b9'];
+        body.addEventListener('click' , function(){
+            //1. set up your width and height
+            var size = Math.floor(Math.random() * 100 + 30);
+            if(size > 110){
+                size = 110;
+            }
+            //2 setup color
+            var RandomColor = Math.floor(Math.random() *7 +1);
+            
+            x = event.clientX;
+            y = event.clientY;
+            var span = document.createElement('span');
+            span.style.width = size + 'px';
+            span.style.height = size + 'px';
+            span.style.left = x + 'px';
+            span.style.top = y + 'px';
+            span.style.backgroundColor = color[RandomColor];
+            body.appendChild(span);
+        });
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>slider</title>
+    <style>
+    
+        body,html{
+            background-color: #646464;
+            width: 472px;
+            margin: auto;
+            font-family: sans-serif;
+            text-align: center;
+        }
+        ul,li{
+            margin: 0;
+            padding: 0;
+        }
+         
+        .slider-wrap{
+            width:472px;
+            overflow: hidden;
+        }
+        .slider-wrap ul{
+            width: 3000px;
+            position: relative;
+            left:0;
+            -webkit-animation: slide 20s;
+            animation-iteration-count: infinite;
+        }
+        .slider-wrap li{
+            float: left;
+            list-style: none; 
+            position: relative;
+        }
+        .slider-wrap h5{
+            position: absolute;
+            bottom: 4px;
+            width: 100%;
+            margin-bottom: 0;
+            background-color: rgba(0,0,0,.7);
+            color: white;
+            padding: 10px;
+            font-size: 18px;
+            
+        }
+        .slider-wrap h5:hover,
+        .slider-wrap ul:hover{
+            animation-play-state: paused;
+        }
+        .slider-wrap a{
+            text-decoration: none;
+        }
+        .text{
+            padding: 10px;
+            text-align: center;
+            font-size: 50px;
+            color: white;
+        }
+        
+        @keyframes slide{
+            10%{
+                left:0;
+            }
+            15%,30%{
+                left:-472px;
+            }
+            
+            35%,50%{
+                left:-944px;
+            }
+            
+            55%,70%{
+                left:-1416px;
+            }
+            
+            75%,90%{
+                left:-1888px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+   <div class="slider-wrap">
+   <div class="text">CSS Slider</div>
+    <ul>
+        <li>
+            <a href="#"> <img src="sliderimg/bags.jpg" alt="">
+                <h5>Awesome Trip Bags</h5> </a>
+        </li>
+        
+        <li>
+            <a href="#"> <img src="sliderimg/clothes.jpg" alt="">
+                <h5>Clothes Is The Difference</h5> </a>
+        </li>
+        
+        <li>
+            <a href="#"> <img src="sliderimg/jewlery.jpg" alt="">
+                <h5>Women Likes It</h5> </a>
+        </li>
+        
+        <li>
+            <a href="#"> <img src="sliderimg/shoes.jpg" alt="">
+                <h5>Be Diffrent</h5> </a>
+        </li>
+        
+        <li>
+            <a href="#"> <img src="sliderimg/shoes2.jpg" alt="">
+                <h5>Perfect Shoes</h5> </a>
+        </li>
+    </ul>
+</div>
+</body>
+
+</html>

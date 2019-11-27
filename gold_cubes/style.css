@@ -103,12 +103,6 @@ h1 {
     animation-duration: 5s;
 }
 
-#grid-1 {
-    /*
-    transform: translateZ(-3000px);
-    opacity: 1;
-*/
-}
 
 @keyframes myAnimation {
     0% {

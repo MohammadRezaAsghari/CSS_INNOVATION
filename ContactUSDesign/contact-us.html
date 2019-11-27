@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/contact-us-style.css">
+    <script src="js/jquery-3.1.1.js"></script>
+</head>
+<body>
+    <div class="wrap">
+    </div>
+    <div class="form-wrapper">
+        <section class="form-text">
+            <div class="left icon-user"></div>
+            <div class="right">
+                <input type="text" class="txt" placeholder="Name">
+            </div>
+        </section>
+        <section class="form-text">
+            <div class="left icon-mail"></div>
+            <div class="right">
+                <input type="text" class="txt" placeholder="Email">
+            </div>
+        </section>
+        <section class="form-text">
+            <div class="left icon-pencil" id="pencil"></div>
+            <div class="right">
+                <input type="text" class="txt" id="comment" placeholder="Comment">
+            </div>
+        </section>
+        <div class="send"><span>SEND</span></div>
+    </div>
+    
+    <script>
+        $(document).ready(function(){
+            $(".form-text").click(function(){
+                $(this).toggleClass("form-click");
+            })
+        });
+    </script>
+</body>
+</html>

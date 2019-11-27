@@ -1,0 +1,199 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../font-1/icomoon.eot?ixhorx');
+  src:  url('../font-1/icomoon.eot?ixhorx#iefix') format('embedded-opentype'),
+    url('../font-1/icomoon.ttf?ixhorx') format('truetype'),
+    url('../font-1/icomoon.woff?ixhorx') format('woff'),
+    url('../font-1/icomoon.svg?ixhorx#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-envelope:before {
+  content: "\e900";
+}
+.icon-mail:before {
+  content: "\e900";
+}
+.icon-email:before {
+  content: "\e900";
+}
+.icon-contact:before {
+  content: "\e900";
+}
+.icon-pencil:before {
+  content: "\e905";
+}
+.icon-user:before {
+  content: "\e971";
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html{
+    width: 100%;
+    height: 100%;
+}
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.wrap {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/2.jpg);
+    background-size: 100% 100%;
+    -webkit-filter: blur(4px);
+}
+
+.wrap::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.form-wrapper {
+    width: 470px;
+    height: 500px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, .4);
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form-text,
+.send {
+    width: 90%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.form-text:first-child {
+    top: 40px;
+    height: 55px;
+    background-color: #ececec;
+}
+
+.form-text:nth-child(2) {
+    top: 130px;
+    height: 55px;
+    background-color: #ececec;
+}
+
+.form-text:nth-child(3) {
+    top: 220px;
+    height: 130px;
+    background-color: #ececec;
+}
+
+.send {
+    top: 385px;
+    height: 75px;
+    background-color: #ececec;
+    color: #fff;
+    text-align: center;
+    line-height: 75px;
+    font-size: 54px;
+    box-shadow: 0 0 0 4px #fff;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.send::before {
+    transition: .2s;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #18af91;
+    position: absolute;
+}
+
+.send>span {
+    position: absolute;
+    z-index: 10;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%) scale(.6);
+}
+
+.send:hover::before {
+    margin-left: 430px
+}
+
+.send:hover span {
+    color: #18af91;
+}
+
+.send:hover {
+    border-bottom: 3px solid #717171;
+}
+
+.right,
+.left{
+    float: left;
+    height: 100%;
+
+}
+.right{
+    width: 85%;
+}
+.left{
+    width: 15%;
+}
+.right>input{
+    height: 100%;
+    width: 100%;
+    color: #18af91;
+    font-size: 20px;
+    position: relative;
+    top: 0;
+    background-color: #ececec;
+    border: none;
+    padding: 5px;
+    line-height: 15px
+}
+input:focus {
+    outline:none;
+}
+.left{
+    font-size: 28px;
+    text-align: center;
+    line-height: 50px;
+}
+.form-click{
+    border: 2px solid #18af91;
+    
+}
+#pencil{
+    line-height: 120px;
+}

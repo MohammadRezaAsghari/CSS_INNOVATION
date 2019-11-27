@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>accordion1</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.js"></script>
+</head>
+<body>
+   
+    <div class="box">CSS3 Slide Accordion</div>
+    
+    <div class="accordion-holder">
+       <div class="left"></div>
+        <h2 class="icon-google-plus"></h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure laboriosam molestiae, aliquam illo expedita ipsa dicta, nihil?</p>
+        <h2 class="icon-facebook"></h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure laboriosam molestiae, aliquam illo expedita ipsa dicta, nihil?</p>
+        <h2 class="icon-instagram"></h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure laboriosam molestiae, aliquam illo expedita ipsa dicta, nihil?</p>
+        <h2 class="icon-twitter"></h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure laboriosam molestiae, aliquam illo expedita ipsa dicta, nihil? </p>
+          <h2 class="icon-pinterest2"></h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure laboriosam molestiae, aliquam illo expedita ipsa dicta, nihil? </p>
+        <div class="right"></div>
+    </div>
+    
+    <script>
+       
+        $(document).ready(function(){
+              $("p").not(":first").animate({width:'0px' ,padding:'0px'},0);
+            
+            $("h2:first").addClass("active");
+            $("h2").click(function(){
+                $(this).toggleClass("active").siblings("h2").removeClass("active");
+                $(this).next("p").animate({width:'18%' ,padding:'50px',paddingTop:'20px'},400).siblings("p").animate({width:'0%' ,padding:'0px'},400);
+            })
+            
+            
+        })
+        
+        
+        
+        
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 1);
+}
+.container{
+    width: 100%;
+    float: left;
+
+    background-color: #3498db;
+    background-color: rgba(0, 0, 0, 0.95);
+}
+
+.row {
+    width: 100%;
+    height: 10%;
+    float: left;
+    clear: both;
+}
+
+.box {
+    width: 10%;
+    height: 145px;
+/*            border: 1px solid rgba(255, 255, 255, 0.03);*/
+    float: left;
+    perspective: 1000px;
+    position: relative;
+}
+.inside-box{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    transform: translateZ(-10000px);
+    animation: mymove 10s ease-in infinite;
+    border-radius: 20px;
+/*
+    -webkit-box-shadow: 0 0 70px 5px rgba(255,255,255,.8);
+    -moz-box-shadow: 0 0 70px 5px rgba(255,255,255,.8);
+    box-shadow: 0 0 70px 5px rgba(255,255,255,.8);
+*/
+    opacity: 0;
+
+}
+.wait-1{
+    animation-delay: 1s;
+    background-color: darksalmon;
+    
+}
+.wait-3{
+    animation-delay: 5s;
+    background-color: skyblue;
+}
+.wait-2{
+    animation-delay: 2s;
+    background-color: forestgreen;
+}
+.wait-4{
+    animation-delay: 7s;
+    background-color: darkcyan;
+}
+.wait-5{
+    animation-delay: 3.5s;
+    background-color: darkslateblue;
+}
+.wait-6{
+    animation-delay: 6.6s;
+    background-color: firebrick;
+}
+.wait-7{
+    animation-delay: 7.3s;
+    background-color: darkorchid;
+}
+.wait-8{
+    animation-delay: 9s;
+    background-color: crimson;
+}
+.wait-9{
+    animation-delay: 10s;
+    background-color: cadetblue;
+}
+.wait-10{
+    animation-delay: 11s;
+    background-color: beige;
+}
+.wait-11{
+    animation-delay: 12s;
+    background-color: #fff;
+    background-color: coral;
+}
+.wait-12{
+    animation-delay: 13s;
+    background-color: burlywood;
+}
+.wait-13{
+    animation-delay: 14s;
+    background-color: cadetblue;
+}
+ .wait-14{
+    animation-delay: 16s;
+    background-color: cadetblue;
+}
+ .wait-15{
+    animation-delay: 18s;
+    background-color: cadetblue;
+}
+body{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+@-webkit-keyframes mymove {
+    0%{
+        transform:translateZ(-30000px) skewY(30deg);
+        opacity: 1;
+    }
+    100%{
+        transform:translateZ(100000px) translateX(-900px) skewY(10deg);
+        opacity:0;
+    }
+    .container
+         .figure
+             10px
+}

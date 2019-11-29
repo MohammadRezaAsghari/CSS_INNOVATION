@@ -1,0 +1,66 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#screen{
+    position: relative;
+    width: 1200px;
+    height: 500px;
+    margin: 50px auto;
+    border-bottom: 1px solid #000;
+    overflow: hidden;
+}
+#ballMainDiv{
+    position: absolute;
+    left: -100px;
+    bottom: 0;
+    width: 100px;
+    height: 100px;
+    animation: moveMainDiv 1.3s linear infinite; 
+}
+#ballSubDiv{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    animation: moveSubDiv 4s infinite;
+}
+#ball{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: #ff5c3c;
+    animation: changeShape 4s infinite;
+}
+@keyframes moveMainDiv{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(1300px);
+    }
+}
+@keyframes moveSubDiv{
+    0% , 25% , 75%, 100%{
+     transform: translateY(-400px);
+        animation-timing-function: ease-in;
+    }
+    10%,35%,60%,85%{
+        transform: translateY(0px);
+        animation-timing-function: ease-out;
+    }
+    
+}
+@keyframes changeShape{
+    0% , 10% , 20%, 35%,45%,60%,70%,85%,95%,100%{
+     transform: scaleX(1.0);transform: scaleY(1.0)
+    }
+    11%,36%,61%,86%{
+     transform: scaleX(1.3);transform: scaleY(.7)
+    }
+    
+    15%,40%,65%,90%{
+     transform: scaleX(.7);transform: scaleY(1.3)
+    }
+    
+}

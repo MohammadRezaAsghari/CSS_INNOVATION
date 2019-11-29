@@ -1,0 +1,58 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;  
+   
+   }
+   body{
+       font-family: sans-serif;
+   }
+   input{
+       display: none;
+   }
+   .btn-class{
+       display: block;
+       width: 100px;
+       height: 50px;
+       background-color: rgba(0,0,0,.3);
+       float: left;
+       margin-left: 1%;
+       text-align: center;
+       color: green;
+       line-height: 50px;
+       margin-bottom: 20px;
+   }
+
+   .row{
+       clear: both;
+       float: left;
+       width: 100%;
+   }
+
+   .box{
+       width: 24%;
+       height:200px;
+       border: 1px solid orange;
+       float: left;
+       margin-left: 1%;
+       text-align: center;
+       line-height: 200px;
+       font-size: 30px;
+       display: none;
+   }
+   
+   #btn-1:checked~#second-row>.box{
+       display: block;
+   }
+   #btn-2:checked~#second-row>.one{
+       display: block;
+   }
+   #btn-3:checked~#second-row>.two{
+       display: block
+   }
+    #btn-4:checked~#second-row>.three{
+       display: block
+   }
+    #btn-5:checked~#second-row>.four{
+       display: block
+   }

@@ -1,0 +1,61 @@
+body{
+    background-color: #34495e;
+}
+
+.parent{
+    
+    width: 200px;
+    height: 60px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.ball{
+    width: 15px;
+    height: 15px;
+    background-color: #e67e22;
+    position: absolute;
+    border-radius: 50%;
+    left: 50%;
+    transition: all .5s;
+    transform: translateX(-50%);
+    transform-origin: left 30px;
+    animation: opacity .7s infinite;
+    
+}
+.ball-1{
+    animation-delay: .1s;
+}
+.ball-2{
+    transform: rotate(35deg);
+    animation-delay: .2s;
+}
+.ball-3{
+    transform: rotate(85deg);
+    animation-delay: .3s;
+}
+.ball-4{
+    transform: rotate(135deg);
+    animation-delay: .4s;
+}
+.ball-5{
+    transform: rotate(185deg);
+    animation-delay: .5s;
+}
+.ball-6{
+    transform: rotate(235deg);
+    animation-delay:.6s;
+}
+.ball-7{
+    transform: rotate(285deg);
+    animation-delay: .7s;
+}
+@keyframes opacity{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}

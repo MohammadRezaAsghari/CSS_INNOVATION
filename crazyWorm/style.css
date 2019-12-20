@@ -22,6 +22,7 @@ body{
     display: inline-block;
     background-color: orangered;
     border-radius: 50%;
+    position: relative;
     
     transform: translateY(0px);
 }
@@ -29,12 +30,46 @@ body{
     animation: move 1s infinite ease-in-out;
     animation-direction: alternate;
 }
+.ball:first-child{
+    background-color: rgb(224, 67, 10)
+}
+.ball::after,
+.ball::before,
+.ball-reverse::before,
+.ball-reverse::after{
+    content: ""; 
+    width: 1px;
+    height: 30%;
+    background-color: rgb(202, 202, 202);
+    position: absolute;
+    z-index: -1;
+}
+.ball::before,
+.ball::after{
+    top: 100%;
+}
+.ball-reverse::after,
+.ball-reverse::before{
+    bottom: 100%;
+}
+.ball::after,
+.ball-reverse::after{
+    left: 30%;
+}
+.ball::before,
+.ball-reverse::before{
+    height: 25%;
+    left: 60%;
+}
 .ball-reverse{
-    opacity: 0.08;
+    opacity: 0.1;
     background-color: orangered;
     animation: move-reverse 1s infinite ease-in-out;
     animation-direction: alternate;
     
+}
+.ball-8{
+    background-color: rgb(224, 67, 10);
 }
 
 .ball-1,
